@@ -42,9 +42,6 @@ class RegisterPage(BasePage):
             assert txt1=="Login","Not in Login Page"
             if txt1=="Login":
                 print("Successfully entered the login page")
-                # user1login=LoginPage(driver)
-                # user1login.loginusernamepassword(username_password)
-                # user1login.submitafterlogin()
         except Exception as e:
             print("An error occurred: %s" % e)
         else:

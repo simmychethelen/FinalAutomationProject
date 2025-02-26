@@ -38,17 +38,12 @@ class RequestQuotation(BasePage):
         self.explicitlywaitelementclick(maxwait,QuotationLocator.savequote)
         savequote=self.getattributeofelement(maxwait,QuotationLocator.savepage).text
         while savequote != '':
-            print(savequote)
             digits=savequote.split(': ')
             digits1=digits[1].split('\n')
             number=str(digits1[0])
-            print(number)
             fileA = open('Id.txt', 'w')
             fileA.write(number)
             fileA.close()
             self.gobacktomainpage()
             break
         return number
-
-    def checkquatationissaved(self):
-        pass

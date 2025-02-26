@@ -1,4 +1,6 @@
 from selenium.webdriver.common.by import By
+# This page contains the Locators for web elements in the Request for Quotation web page,
+# and also a constant variable. This is passed in quotationpage3.
 
 class QuotationLocator:
     requestquotationbtn=(By.XPATH,"//a[contains(text(),'Request')]")

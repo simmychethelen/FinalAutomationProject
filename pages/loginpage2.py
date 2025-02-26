@@ -17,7 +17,7 @@ class LoginPage(BasePage):
 
         if url1==mainlink:
             self.navigateto(url1)
-            print('right page')
+            print('You are in the Login Page')
         else:
             self.navigateto(mainlink)
 

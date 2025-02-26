@@ -7,7 +7,6 @@ from selenium.webdriver.support import expected_conditions as ec
 class BasePage:
     def __init__(self,driver):
         self.driver=driver
-        self.number=0
 
     def navigateto(self,url):
         self.driver.get(url)

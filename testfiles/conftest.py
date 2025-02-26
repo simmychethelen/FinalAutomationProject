@@ -9,17 +9,17 @@ def username_password():
     return [username, password]
 
 
-@pytest.fixture(scope="module")
-def driver():
-     _driver = webdriver.Edge()
-     yield _driver
-     _driver.quit()
+# @pytest.fixture(scope="module")
+# def driver():
+#      _driver = webdriver.Edge()
+#      yield _driver
+#      _driver.quit()
 
-# @pytest.fixture(params=["Edge","firefox"],scope='module')
-# def driver(request):
-#     if request.param=="Edge":
-#         _driver=webdriver.Edge()
-#     if request.param=="firefox":
-#         _driver=webdriver.Firefox()
-#     yield _driver
-#     _driver.quit()
+@pytest.fixture(params=["Edge","firefox"],scope='module')
+def driver(request):
+    if request.param=="Edge":
+        _driver=webdriver.Edge()
+    if request.param=="firefox":
+        _driver=webdriver.Firefox()
+    yield _driver
+    _driver.quit()

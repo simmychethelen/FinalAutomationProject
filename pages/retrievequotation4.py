@@ -18,8 +18,7 @@ class RetrieveQuotation(BasePage):
         file_data = RetrieveLocator.getfilecontents()
         print(file_data)
         if file_data:  # Ensure the file content is not empty
-            # Pass the data to the findelement method
             self.findelement(RetrieveLocator.retrievefield, file_data)
             self.explicitlywaitelementclick(maxwait,RetrieveLocator.retrievebtn)
         else:
-            print("No data found in sample.txt")
+            print("No data found in sample.txt. Need to ")
