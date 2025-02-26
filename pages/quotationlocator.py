@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 # This page contains the Locators for web elements in the Request for Quotation web page,
-# and also a constant variable. This is passed in quotationpage3.
+# and also a constant variable. This is passed in quotationpage3, quotationcheckpage3
 
 class QuotationLocator:
     requestquotationbtn=(By.XPATH,"//a[contains(text(),'Request')]")
@@ -16,6 +16,7 @@ class QuotationLocator:
     mileagevalue='130000'
     estimatefield = (By.XPATH, "//input[@name='value']")
     estimatevalue='85000'
+    estimatevalue1=''
     parkingdd=(By.XPATH, "//select[@name='parkinglocation']")
     parkingvalue='Locked Garage'
     policyyear=(By.NAME,"year")
@@ -28,3 +29,4 @@ class QuotationLocator:
     premium=(By.XPATH,"//p[@id='calculatedpremium']")
     savequote=(By.XPATH,"//*[@name='submit']")
     savepage=(By.XPATH,"/html/body")
+    checkestimatevalue=(By.CSS_SELECTOR,"#quotation_vehicle_attributes_value[name='value']")
